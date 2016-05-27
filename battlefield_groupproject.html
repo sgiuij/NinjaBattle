@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Disappearing Ninja</title>
+	<link rel="stylesheet" type="text/css" href="battlefield_groupproject.css">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('img').hide();
+			$('#selPlayer').hide();
+
+			$('#selbackground button').hover(function(){
+				$('#wrapper img').hide();
+				var temp1=$(this).attr('id');
+				$('img' +'#'+temp1+"1").show();
+			});
+
+			$('#selbackground button').click(function(){
+				$('#wrapper img').hide();
+				var temp=$(this).attr('id');
+				$('img' +'#'+temp+"1").show();
+				$('#selbackground').hide();
+				$('#selPlayer').show();
+			});
+			$('selbackground button').hide();
+
+			$('#left').change(function(ef){
+				$('#left1 img').hide();
+				// alert('working')
+				// console.log(e.target.value);
+				// var temp=$(this).attr('#e.target');
+				// console.log(temp);
+				$('img' +'#'+ef.target.value+"1").show();
+			});
+
+			$('#right').change(function(e){
+				$('#right1 img').hide();
+				// console.log(e.target.value);
+				// console.log(temp);
+				$('img' +'#'+e.target.value+"1").show();
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<img src="dojo.jpg" alt="dojo" id="dojo1">
+		<img src="beach.jpg" alt="beach" id="beach1">
+		<img src="forest.jpg" alt="forest" id="forest1">
+		<img src="matrix.jpg" alt="matrix" id="matrix1">
+		<img src="snow.jpg" alt="snow" id="snow1">
+		<img src="calvinandhobbes.jpg" alt="calvin" id="calvin1">
+	</div>
+	<div id="selbackground">Select Arena
+		<button id="beach">beach</button>
+		<button id="calvin">calvin</button>
+		<button id="dojo">dojo</button>
+		<button id="forest">forest</button>
+		<button id="matrix">matrix</button>
+		<button id="snow">snow</button>
+	</div>
+	<div id="selPlayer">
+
+		<div id="left1">
+		<select id="left">
+			<option value="Yellow">Yellow Ninja</option>
+			<option value="White">White Ninja</option>
+			<option value="Black">Black Ninja</option>
+			<option value="Green">Green Ninja</option>
+			<option value="Red">Red Ninja</option>
+			<option value="Leo">Leo Ninja</option>
+		</select>
+
+			<img src="Yellow.png" alt="Yellow" id="Yellow1">
+			<img src="White.png" alt="White" id="White1">
+			<img src="Black.png" alt="Black" id="Black1">
+			<img src="Green.png" alt="Green" id="Green1">
+			<img src="Red.png" alt="Red" id="Red1">
+			<img src="Leo.jpg" alt="Leo" id="Leo1">
+		</div>
+
+		<div id="right1">
+		<select id="right">
+			<option value="Yelloww">Yellow Ninja</option>
+			<option value="Whitee">White Ninja</option>
+			<option value="Blackk">Black Ninja</option>
+			<option value="Greenn">Green Ninja</option>
+			<option value="Redd">Red Ninja</option>
+			<option value="Leoo">Leo Ninja</option>
+		</select>
+			<img src="Yellow.png" alt="Yellow" id="Yelloww1">
+			<img src="White.png" alt="White" id="Whitee1">
+			<img src="Black.png" alt="Black" id="Blackk1">
+			<img src="Green.png" alt="Green" id="Greenn1">
+			<img src="Red.png" alt="Red" id="Redd1">
+			<img src="Leo.jpg" alt="Leo" id="Leoo1">
+		</div>
+</div>
+</body>
+</html>
