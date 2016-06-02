@@ -19,7 +19,6 @@ body{
 	height: 150px;
 }
 
-
 a{
 	text-decoration: none;
 }
@@ -28,10 +27,9 @@ a{
 	top: 200px;
 	left: 300px;
 	width: 240px;
-	background-color: yellow;
-	/*display: inline-block;
+	background-color: (0,255,0,0.5);
+	display: inline-block;
 	vertical-align: top;
-	opacity: 50%;*/
 	
 }
 button{

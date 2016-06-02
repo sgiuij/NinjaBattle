@@ -1,21 +1,76 @@
+
 <!doctype html>
 <html>
 <head>
 	<meta charset="utf-8"/>
 	<title>Disappearing Ninja</title>
-	<link rel="stylesheet" type="text/css" href="battlefield_groupproject.css">
-	<script type="text/javascript" src="jquery.js"></script>
+	<style type="text/css">
+		*{
+			font-family: calibri;
+		}
+		body{
+			background-color: black;
+		}
+		#wrapper img{
+			display: block;
+			width: 99%;
+			height: 37em;
+			margin: 0 auto;
+		}
+		#selPlayer img{
+			width:10em;
+			position:absolute;
+			top:16em;
+			height: 15em;
+		}
+		#op{
+			top: 8em;
+			left: 39%;
+			width: 12em;
+			background-color:rgba(255,255,0,0.8);
+			display: inline-block;
+			vertical-align: top;
+			padding: 1em;
+			position: absolute;
+		}
+		h3{
+			text-align: center;
+			font-size: 1.5em;
+		}
+		
+		#selbackground{
+			position: absolute;
+			top: 8em;
+			left: 40%;
+			width: 9em;
+			background-color:rgba(255,255,0,0.8);
+			display: inline-block;
+			vertical-align: top;
+			padding: 1em;
+		}
+		button{
+			display: inline-block;
+			width: 4em;
+		}
+		
+		#left1 img{
+			left:26%;
+		}
+		#right1 img{
+			left:56%;
+		}
+		
+	</style>
+	<script type="text/javascript" src="/Users/Giuij/Documents/codingdojo/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$('img').hide();
 			$('#selPlayer').hide();
-
 			$('#selbackground button').hover(function(){
 				$('#wrapper img').hide();
 				var temp1=$(this).attr('id');
 				$('img' +'#'+temp1+"1").show();
 			});
-
 			$('#selbackground button').click(function(){
 				$('#wrapper img').hide();
 				var temp=$(this).attr('id');
@@ -24,7 +79,6 @@
 				$('#selPlayer').show();
 			});
 			$('selbackground button').hide();
-
 			$('#left').change(function(ef){
 				$('#left1 img').hide();
 				// alert('working')
@@ -33,14 +87,12 @@
 				// console.log(temp);
 				$('img' +'#'+ef.target.value+"1").show();
 			});
-
 			$('#right').change(function(e){
 				$('#right1 img').hide();
 				// console.log(e.target.value);
 				// console.log(temp);
-				$('img' +'#'+e.target.value+"1").show();
+				$('img' +'#'+e.target.value+"2").show();
 			});
-
 		});
 	</script>
 </head>
@@ -53,7 +105,7 @@
 		<img src="snow.jpg" alt="snow" id="snow1">
 		<img src="calvinandhobbes.jpg" alt="calvin" id="calvin1">
 	</div>
-	<div id="selbackground">Select Arena
+	<div id="selbackground"><h3>Select Arena</h3>
 		<button id="beach">beach</button>
 		<button id="calvin">calvin</button>
 		<button id="dojo">dojo</button>
@@ -63,16 +115,27 @@
 	</div>
 	<div id="selPlayer">
 
-		<div id="left1">
-		<select id="left">
-			<option value="Yellow">Yellow Ninja</option>
-			<option value="White">White Ninja</option>
-			<option value="Black">Black Ninja</option>
-			<option value="Green">Green Ninja</option>
-			<option value="Red">Red Ninja</option>
-			<option value="Leo">Leo Ninja</option>
-		</select>
+		<div id="op"><h3>Select Player</h3>
+			<select id="left">
+				<option value="Yellow">Yellow Ninja</option>
+				<option value="White">White Ninja</option>
+				<option value="Black">Black Ninja</option>
+				<option value="Green">Green Ninja</option>
+				<option value="Red">Red Ninja</option>
+				<option value="Leo">Leo Ninja</option>
+			</select>
 
+			<select id="right">
+				<option value="Yellow">Yellow Ninja</option>
+				<option value="White">White Ninja</option>
+				<option value="Black">Black Ninja</option>
+				<option value="Green">Green Ninja</option>
+				<option value="Red">Red Ninja</option>
+				<option value="Leo">Leo Ninja</option>
+			</select>
+		</div>
+
+		<div id="left1">	
 			<img src="Yellow.png" alt="Yellow" id="Yellow1">
 			<img src="White.png" alt="White" id="White1">
 			<img src="Black.png" alt="Black" id="Black1">
@@ -82,20 +145,13 @@
 		</div>
 
 		<div id="right1">
-		<select id="right">
-			<option value="Yelloww">Yellow Ninja</option>
-			<option value="Whitee">White Ninja</option>
-			<option value="Blackk">Black Ninja</option>
-			<option value="Greenn">Green Ninja</option>
-			<option value="Redd">Red Ninja</option>
-			<option value="Leoo">Leo Ninja</option>
-		</select>
-			<img src="Yellow.png" alt="Yellow" id="Yelloww1">
-			<img src="White.png" alt="White" id="Whitee1">
-			<img src="Black.png" alt="Black" id="Blackk1">
-			<img src="Green.png" alt="Green" id="Greenn1">
-			<img src="Red.png" alt="Red" id="Redd1">
-			<img src="Leo.jpg" alt="Leo" id="Leoo1">
+		
+			<img src="Yellow.png" alt="Yellow" id="Yellow2">
+			<img src="White.png" alt="White" id="White2">
+			<img src="Black.png" alt="Black" id="Black2">
+			<img src="Green.png" alt="Green" id="Green2">
+			<img src="Red.png" alt="Red" id="Red2">
+			<img src="Leo.jpg" alt="Leo" id="Leo2">
 		</div>
 </div>
 </body>
